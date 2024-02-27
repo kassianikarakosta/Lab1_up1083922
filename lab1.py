@@ -22,3 +22,12 @@ with requests.get(url) as response:  # το αντικείμενο response
 
     print("\n")
 
+# Πληροφορίες για τα cookies
+    cookies = response.cookies
+    if cookies:
+        print("Τα cookies που χρησιμοποιούνται:")
+        for cookie in cookies:
+            print(f"Όνομα: {cookie.name}, Διάρκεια: {cookie.expires if cookie.expires else 'Παραμένει έγκυρο'}")
+    else:
+        print("Cookies not found")
+
