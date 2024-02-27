@@ -15,3 +15,10 @@ with requests.get(url) as response:  # το αντικείμενο response
         print(f"{header}: {value}")
 
     print("\n")
+
+# Πληροφορίες για τον εξυπηρετητή
+    print("Λογισμικό εξυπηρετητή:")
+    print(f"{response.headers.get('Server', 'Server not found')}")
+
+    print("\n")
+
